@@ -1,4 +1,4 @@
-﻿function Recipe(name, preparationTime, difficulty, instructions, ingredients, img) {
+function Recipe(name, preparationTime, difficulty, instructions, ingredients, img) {
     this.name = name;
     this.preparationTime = preparationTime;
     this.difficulty = difficulty;
@@ -245,23 +245,6 @@ new Recipe('כרעי עוף ברוטב פלפלים קלויים',
 ]
 
 
-console.log('hi :)');
-
-function isOverflown(element) {
-    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
-}
-
-function addoverflowIndication(element) {
-    var recipeTitles = document.getElementsByClassName('titleContainer');
-    for (let i = 0; i < recipeTitles.length; i++) {
-        recipeTitles[i].getElementsByTagName('span')[0].innerHTML = "...";
-    }
-}
-
-
-
-
-
 (function addRandomRecipes() {
     let container = document.getElementById('randomRecipesContainer');
     let usedIndex = [];
@@ -396,8 +379,6 @@ function createRecipeIngredientsNode(ingredientsArr) {
     return ingredientsContainer;   
 }
 
-
-
 function createRecipeInstructionsNode(instructionsArr) {
 
   let instrutionsContainer = document.createElement('div');
@@ -447,21 +428,4 @@ function createScrollBarNode(element) {
 
     return scrollbar;
 
-}
-
-
-function createRecipeInstructionsNode_old(instructionsArr) {
-
-    let instrutionsContainer = document.createElement('div');
-    instrutionsContainer.classList.add('instrutionsContainer');
-
-    for (let i = 0; i < instructionsArr.length; i++) {
-        let p = document.createElement('p');
-        p.classList.add('instructions');
-        p.innerHTML = instructionsArr[i];
-
-        instrutionsContainer.appendChild(p);
-    }
-
-    return instrutionsContainer;
 }
