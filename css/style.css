@@ -9,17 +9,12 @@
   height: auto;
   border: 0;
 }
-/**
-#staticRecipesContainer
-{
-    background-color: red;
+#staticRecipesContainer {
+  background-color: red;
 }
-
-
-#randomRecipesContainer
-{
-    background-color: greenyellow;
-}*/
+#randomRecipesContainer {
+  background-color: greenyellow;
+}
 body {
   direction: rtl;
   background-color: #f0efef;
